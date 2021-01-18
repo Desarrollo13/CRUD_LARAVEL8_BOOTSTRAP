@@ -1,9 +1,12 @@
-@extends('layouts.plantillabase');
+@extends('adminlte::page')
 
-@section('contenido')
+@section('title', 'CRUD en laravel 8')
 
-<h2>CREAR REGISTROS</h2>
+@section('content_header')
+    <h1>Crear Articulos</h1>
+@stop
 
+@section('content')
 <form action="/articulos" method="post">
 <!-- @csrf esta normativa es para solucionar el problema de error 404 -->
     @csrf
@@ -30,6 +33,12 @@
 
 
 </form>
+@stop
 
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
 
-@endsection
+@section('js')
+    
+@stop

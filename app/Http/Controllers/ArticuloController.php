@@ -7,6 +7,11 @@ use App\Models\Articulo;
 
 class ArticuloController extends Controller
 {
+    public function __construct()
+    {
+        // esto es para que se redirija al login
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
